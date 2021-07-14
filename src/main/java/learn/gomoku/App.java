@@ -29,7 +29,8 @@ public class App {
             Stone stone = promptPlacement(gomoku);
             gameBoard[stone.getRow()][stone.getColumn()] = stone.isBlack() ? 'X' : 'O';
         }
-
+        //Shows final board state
+        drawBoard(gameBoard);
     }
 
     private static Stone promptPlacement(Gomoku gomoku){
