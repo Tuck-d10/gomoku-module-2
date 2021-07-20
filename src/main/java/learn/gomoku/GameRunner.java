@@ -23,7 +23,7 @@ public class GameRunner {
     public void run(){
         do{
             setupGame();
-            System.out.printf("%s -vs- %s, %s goes first\n",p1,p2,game.getCurrent().getName());
+            System.out.printf("%s -vs- %s, %s goes first\n",p1.getName(),p2.getName(),game.getCurrent().getName());
 
             playGame();
         }while(continuePlaying());
@@ -73,7 +73,8 @@ public class GameRunner {
     private Coord promptCoordinates(){
         Coord coord = new Coord();
 
-        System.out.println("Row: ");
+        System.out.printf("Where would you like to place your stone %s\n",game.getCurrent().getName());
+        System.out.printf("Row: \n");
         coord.setRow(sc.nextLine());
         System.out.println("Column: ");
         coord.setColumn(sc.nextLine());
